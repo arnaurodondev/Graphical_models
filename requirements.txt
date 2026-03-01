@@ -1,4 +1,4 @@
-numpy
-networkx
-pgmpy
-matplotlib
+numpy==1.26.4
+networkx==3.2.1
+pgmpy==0.1.25
+matplotlib==3.8.4

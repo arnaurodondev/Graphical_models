@@ -6,7 +6,7 @@ An LDPC code is defined by a sparse parity-check matrix $H \in \{0,1\}^{M \times
 
 - $N$: number of transmitted bits
 - $M$: number of parity checks
-- Row $m$ of $H$ indicates which bits participate in check $m$
+- Row $m$ of $H$ indicates which bits participate in check $m$ (each row has $k$ ones that define the parity-check equation)
 
 A valid codeword $x \in \{0,1\}^N$ satisfies:
 
@@ -43,11 +43,11 @@ $$
 \end{cases}
 $$
 
-So these factors are hard constraints: assignments violating parity get probability mass 0.
+So these factors are hard constraints: assignments violating parity get probability mass 0, those codes are not valid codewords.
 
 ## 4) Channel model (BSC)
 
-Binary Symmetric Channel with flip probability $f$:
+Binary Symmetric Channel with flip probability $f$ (e.g., $f=0.1$ means each bit is flipped with 10% chance for both X=0 and X=1):
 
 $$
 \phi_n(x_n,y_n)=p(y_n\mid x_n)=
@@ -66,7 +66,8 @@ LDPC stands for low-density parity-check:
 - each row has few ones (small check degree $k$)
 - each column has few ones (small variable degree $j$)
 
-Sparsity gives efficient message passing while still providing strong error correction for large block lengths.
+Sparsity enables efficient message passing (linear-time decoding per iteration) while still achieving strong error-correction performance at large block lengths. If N is the number of information bits and M is the number of parity checks, then the code rate is: $R = \frac{N}{N+M}$, which is less than 1 due to the redundancy introduced by parity checks.
+
 
 ## 6) Validation ideas in P4
 

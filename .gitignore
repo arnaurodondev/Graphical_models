@@ -1,20 +1,8 @@
 # Python cache
 __pycache__/
-*.py[cod]
-*$py.class
 
 # Virtual environments
 .venv/
-venv/
-env/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Build/distribution
-build/
-dist/
-*.egg-info/
 
 # Tool caches
 .pytest_cache/
