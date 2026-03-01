@@ -1,5 +1,10 @@
 # Graphical Models — LDPC Labs (P4 & P5)
 
+## Owners
+
+- Arnau Rodon Comas (U212914)
+- Jesús Santos Esteban (u186668)
+
 This repository contains two Jupyter notebooks for understanding LDPC codes from a probabilistic graphical models perspective:
 
 - `P4_ LDPC representation (STUDENT VERSION).ipynb`
